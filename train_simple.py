@@ -1,7 +1,7 @@
 '''
 This is a simplified training code of StyleSwap. It achieves comparable performance as in the paper.
 
-@Created by rosinality and yangx
+@Created by rosinality and yangxy
 
 @Modified by Mingtao Guo (gmt798714378@hotmail.com)
 '''
