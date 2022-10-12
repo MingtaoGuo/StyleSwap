@@ -29,7 +29,7 @@ All dependencies for defining the environment are provided in `environment.yaml`
 
 - Generate face mask by faceparsing
 ``` 
-python face_parsing/face_parsing.py --img_dir face_dataset --res_dir face_mask_dataset --resolution 256
+python face_parsing/face_parsing.py --img_dir face_dataset --res_dir face_mask_dataset --resolution 256 --model_path saved_models/79999_iter.pth 
 ```
 - Train StyleSwap 
 ``` 
