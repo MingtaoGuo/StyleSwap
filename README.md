@@ -35,6 +35,8 @@ python face_parsing/face_parsing.py --img_dir face_dataset --res_dir face_mask_d
 ``` 
 python train_simple.py --img_path face_dataset --mask_path face_mask_dataset --arcface saved_models/backbone.pth 
 ```
+### Inference
+- Pretrained model is coming soon
 ## Author 
 Mingtao Guo
 E-mail: gmt798714378@hotmail.com
