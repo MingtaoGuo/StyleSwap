@@ -1,9 +1,9 @@
 '''
-This is a simplified training code of GPEN. It achieves comparable performance as in the paper.
+This is a simplified training code of StyleSwap. It achieves comparable performance as in the paper.
 
-@Created by rosinality
+@Created by rosinality and yangx
 
-@Modified by yangxy (yangtao9009@gmail.com)
+@Modified by Mingtao Guo (gmt798714378@hotmail.com)
 '''
 import argparse
 from ctypes import resize
