@@ -303,7 +303,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--img_path', type=str, default="/data1/GMT/Dataset/FFHQ256/")
-    parser.add_argument('--mask_path', type=str, default="/data1/GMT/Dataset/FFHQ128parsing/")
+    parser.add_argument('--mask_path', type=str, default="/data1/GMT/Dataset/FFHQ256parsing/")
     parser.add_argument('--base_dir', type=str, default='./')
     parser.add_argument('--arcface', type=str, default='saved_models/backbone.pth')
     parser.add_argument('--iter', type=int, default=4000000)
