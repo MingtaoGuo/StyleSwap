@@ -1,1 +1,3 @@
-path
+- Download the face parsing model from [faceparsing](https://github.com/zllrunning/face-parsing.PyTorch)
+- Download the face recognition model arcface from [insightface](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) Go to  Baidu Drive **->** arcface_torch **->** glint360k_cosface_r50_fp16_0.1 **->** backbone.pth
+- Put face parsing model 79999_iter.pth and face recognition model arcface backbone.pth here
