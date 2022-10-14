@@ -205,7 +205,7 @@ def train(args, loader, generator, discriminator, arcface, vgg19, g_optim, d_opt
         bce_loss = F.binary_cross_entropy(fake_mask, mask).mean()
         # bce_loss = F.l1_loss(fake_mask, mask).mean()
         # ----------- total loss -------------
-        g_loss = adv_loss + 10 * id_loss + bce_loss + 10 * fm_loss + 10 * rec_loss
+        g_loss = adv_loss + 50 * id_loss + bce_loss + fm_loss + rec_loss
         loss_dict['g'] = g_loss
         loss_dict['adv'] = adv_loss
         loss_dict['id'] = id_loss
