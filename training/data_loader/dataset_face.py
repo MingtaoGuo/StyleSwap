@@ -18,25 +18,15 @@ class FaceDataset(Dataset):
             transforms.ColorJitter(0.2, 0.2, 0.2, 0.01),
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-            transforms.RandomHorizontalFlip()
         ])
-        self.transforms_mask = transforms.Compose([
-            transforms.ToTensor(),
-            transforms.RandomHorizontalFlip()
-        ])
+        self.transforms_mask = transforms.Compose([transforms.ToTensor()])
 
     def __len__(self):
         return self.length
 
     def __getitem__(self, index):
-        seed = torch.random.seed()
-        torch.random.manual_seed(seed)
-        target = Image.open(self.img_path + "/" + self.files[index]).resize([self.resolution, self.resolution])
-        target = self.transforms(target)
-        torch.random.manual_seed(seed)
-        mask = Image.open(self.mask_path + "/" + self.files[index]).resize([self.resolution, self.resolution])
-        mask = self.transforms_mask(mask)
-        
+        target = self.transforms(Image.open(self.img_path + "/" + self.files[index]).resize([self.resolution, self.resolution]))
+        mask = self.transforms_mask(Image.open(self.mask_path + "/" + self.files[index]).resize([self.resolution, self.resolution]))
         if np.random.uniform() < self.same_prob:
             source = Image.open(self.img_path + "/" + self.files[index]).resize([self.resolution, self.resolution])
             source = self.transforms(source)
