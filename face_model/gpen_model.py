@@ -1,7 +1,3 @@
-'''
-@paper: GAN Prior Embedded Network for Blind Face Restoration in the Wild (CVPR2021)
-@author: yangxy (yangtao9009@gmail.com)
-'''
 import math
 import random
 import functools
@@ -702,7 +698,6 @@ class FullGenerator(nn.Module):
         truncation_latent=None,
         input_is_latent=False,
     ):
-        I = inputs * 1.0
         noise = []
         for i in range(self.log_size-1):
             ecd = getattr(self, self.names[i])
@@ -713,7 +708,6 @@ class FullGenerator(nn.Module):
         noise = noise[::-1]
         outs = self.generator([z_id], return_latents, inject_index, truncation, truncation_latent, input_is_latent, noise=noise)
         I_st, latents, M = outs
-        # res = I_st * M + I * (1 - M)
         return I_st, latents, M
 
 class Discriminator(nn.Module):
@@ -779,7 +773,7 @@ class Discriminator(nn.Module):
 
         out = out.view(batch, -1)
         out = self.final_linear(out)
-        return out, feats
+        return out, feats[2:]
 
 
 class VGG19(torch.nn.Module):
