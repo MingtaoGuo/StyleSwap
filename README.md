@@ -39,7 +39,7 @@ python train_simple.py --img_path face_dataset --mask_path face_mask_dataset --a
 - Pretrained model is coming soon!
 ## Author 
 Mingtao Guo
-E-mail: gmt798714378@hotmail.com
+E-mail: gmt798714378 at hotmail dot com
 
 ## Reference
 [1]. Xu, Zhiliang, et al. "StyleSwap: Style-Based Generator Empowers Robust Face Swapping." arXiv preprint arXiv:2209.13514 (2022).
